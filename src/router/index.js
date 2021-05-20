@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import weatherCast from '../components/weatherCast.vue'
+import dogInfo from '../components/dogInfo.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'weatherCast',
+    component: weatherCast
+  },
+  {
+    path: '/dog-info',
+    name: 'dogInfo',
+    component: dogInfo
   },
   {
     path: '/about',

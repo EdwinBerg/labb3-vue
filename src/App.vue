@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-link class="nav-bar" to="/">Väderprognos</router-link>
+    <router-link class="nav-bar" to="/dog-info">Hund fakta</router-link>
+
+    <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  name: "app",
+};
+</script>
 
 <style>
 #app {
@@ -19,6 +24,19 @@
 
 #nav {
   padding: 30px;
+}
+
+.nav-bar {
+  display: inline-flex;
+  padding: 2rem 1rem;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: crimson;
+}
+
+.nav-bar:hover {
+  color: #333;
 }
 
 #nav a {
